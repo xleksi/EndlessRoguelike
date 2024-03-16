@@ -3,13 +3,20 @@ using UnityEngine;
 [System.Serializable]
 public class AttributeComponent
 {
+    [SerializeField] private int initialValue;
     [SerializeField] private int value;
 
     public AttributeComponent(int initialValue)
     {
+        this.initialValue = initialValue;
         value = initialValue;
     }
 
+    public int InitialValue
+    {
+        get { return initialValue; }
+    }
+    
     public int Value
     {
         get { return value; }
@@ -23,6 +30,6 @@ public class AttributeComponent
 
     public void Subtract(int amount)
     {
-        value -= amount;
+        value -= Mathf.Max(0,value-amount);
     }
 }

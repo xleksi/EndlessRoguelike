@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    private struct Attributes
+    [System.Serializable]
+    public struct Attributes
     {
         public AttributeComponent Health;
         public AttributeComponent Attack;
-        public AttributeComponent Movement;
+        public AttributeComponent MoveSpeed;
     }
 
     [SerializeField] private Attributes attributes;
@@ -14,9 +15,14 @@ public class Character : MonoBehaviour
 
     protected virtual void Start()
     {
-        attributes.Health = new AttributeComponent(attributes.Health.Value);
-        attributes.Attack = new AttributeComponent(attributes.Attack.Value);
-        attributes.Movement = new AttributeComponent(attributes.Movement.Value);
+        InitializeAttributes();
+    }
+    
+    protected void InitializeAttributes()
+    {
+        attributes.Health = new AttributeComponent(attributes.Health.InitialValue);
+        attributes.Attack = new AttributeComponent(attributes.Attack.InitialValue);
+        attributes.MoveSpeed = new AttributeComponent(attributes.MoveSpeed.InitialValue);
     }
 
     public virtual void TakeDamage(int amount)
@@ -33,7 +39,7 @@ public class Character : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private Attributes GetAttributes()
+    public Attributes GetAttributes()
     {
         return attributes;
     }
