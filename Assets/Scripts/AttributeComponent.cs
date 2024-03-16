@@ -30,6 +30,6 @@ public class AttributeComponent
 
     public void Subtract(int amount)
     {
-        value -= Mathf.Max(0,value-amount);
+        value -= amount;
     }
 }

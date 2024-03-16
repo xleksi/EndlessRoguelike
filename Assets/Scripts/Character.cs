@@ -39,9 +39,10 @@ public class Character : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isHurt", true);
+            animator.Play("Hurt");
         }
     }
+    
 
     protected virtual void Die()
     {
