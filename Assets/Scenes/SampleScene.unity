@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FollowSpeed: 2
-  yOffset: 1
+  yOffset: 0
   target: {fileID: 223723933}
 --- !u!1001 &3457486055359290573
 PrefabInstance:
@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6394314727003044979, guid: 71836eb7158ff9549aab6b85aa33ae46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6394314727003044979, guid: 71836eb7158ff9549aab6b85aa33ae46, type: 3}
       propertyPath: m_LocalPosition.z

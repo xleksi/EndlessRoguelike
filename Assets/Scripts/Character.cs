@@ -12,10 +12,13 @@ public class Character : MonoBehaviour
 
     [SerializeField] private Attributes attributes;
     [SerializeField] private int level;
+    private Animator animator;
+    
 
     protected virtual void Start()
     {
         InitializeAttributes();
+        animator = GetComponent<Animator>();
     }
     
     protected void InitializeAttributes()
@@ -32,10 +35,15 @@ public class Character : MonoBehaviour
         {
             Die();
         }
+        else
+        {
+            animator.SetBool("isHurt", true);
+        }
     }
 
     protected virtual void Die()
     {
+        animator.SetBool("isAlive",false);
         Destroy(gameObject);
     }
 
