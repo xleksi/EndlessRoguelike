@@ -45,13 +45,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isAttacking", false);
         }
 
-        /*if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            animator.SetBool("isHurt", true);
+            character.TakeDamage(1);
         }
-        else
-        {
-            animator.SetBool("isHurt", false);
-        }*/
+
     }
 }

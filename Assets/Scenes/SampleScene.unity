@@ -160,9 +160,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attributes:
     Health:
+      initialValue: 5
+      value: 0
+    AttackSpeed:
       initialValue: 0
       value: 0
-    Attack:
+    AttackDamage:
       initialValue: 0
       value: 0
     MoveSpeed:

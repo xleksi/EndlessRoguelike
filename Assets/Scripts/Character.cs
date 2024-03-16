@@ -6,7 +6,8 @@ public class Character : MonoBehaviour
     public struct Attributes
     {
         public AttributeComponent Health;
-        public AttributeComponent Attack;
+        public AttributeComponent AttackSpeed;
+        public AttributeComponent AttackDamage;
         public AttributeComponent MoveSpeed;
     }
 
@@ -24,7 +25,8 @@ public class Character : MonoBehaviour
     protected void InitializeAttributes()
     {
         attributes.Health = new AttributeComponent(attributes.Health.InitialValue);
-        attributes.Attack = new AttributeComponent(attributes.Attack.InitialValue);
+        attributes.AttackSpeed = new AttributeComponent(attributes.AttackSpeed.InitialValue);
+        attributes.AttackDamage = new AttributeComponent(attributes.AttackDamage.InitialValue);
         attributes.MoveSpeed = new AttributeComponent(attributes.MoveSpeed.InitialValue);
     }
 
