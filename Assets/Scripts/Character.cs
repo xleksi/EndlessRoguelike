@@ -60,4 +60,13 @@ public class Character : MonoBehaviour
         get { return level; }
         set { level = value; }
     }
+
+    private void LevelUpModifiers()
+    {
+        float modifiedAttackSpeed = attributes.AttackSpeed.Value * (1 + level * 0.05f);
+        float modifiedWalkSpeed = attributes.MoveSpeed.Value * (1 + level * 0.05f);
+    
+        animator.SetFloat("AttackSpeedMultiplier", modifiedAttackSpeed);
+        animator.SetFloat("WalkSpeedMultiplier", modifiedWalkSpeed);
+    }
 }
