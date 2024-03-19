@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attributes:
     Health:
-      initialValue: 5
+      initialValue: 20
       value: 0
     AttackSpeed:
       initialValue: 5
@@ -611,15 +611,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3196719118677637000, guid: 843e668f202d1cd4c999c00c937f8ca3, type: 3}
       propertyPath: attributes.Health.initialValue
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3196719118677637000, guid: 843e668f202d1cd4c999c00c937f8ca3, type: 3}
       propertyPath: attributes.MoveSpeed.initialValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3196719118677637000, guid: 843e668f202d1cd4c999c00c937f8ca3, type: 3}
+      propertyPath: attributes.AttackRate.initialValue
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4365840742835320032, guid: 843e668f202d1cd4c999c00c937f8ca3, type: 3}
       propertyPath: m_Name
       value: Flying Eye
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365840742835320032, guid: 843e668f202d1cd4c999c00c937f8ca3, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5276550005545041183, guid: 843e668f202d1cd4c999c00c937f8ca3, type: 3}
       propertyPath: m_Enabled

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,10 @@ public class Projectile : MonoBehaviour
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;
-    public float Speed;
     public float DestroyDelay;
     private Character character;
     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +31,18 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Character enemyCharacter = collision.GetComponent<Character>();
+            if (enemyCharacter != null)
+            {
+                enemyCharacter.TakeDamage(character.GetAttributes().AttackDamage.Value);
+            }
+            Destroy(gameObject);
+        }
     }
 }

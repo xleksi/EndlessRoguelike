@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 672203142814530626}
   - component: {fileID: 6947623667481220467}
+  - component: {fileID: 5760366587331513280}
   - component: {fileID: 8432240843312630480}
   - component: {fileID: 5276550005545041183}
-  - component: {fileID: 5760366587331513280}
   - component: {fileID: 3196719118677637000}
   - component: {fileID: 3690033373198589664}
   m_Layer: 0
@@ -89,6 +89,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5760366587331513280
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4365840742835320032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6413682c622ec034ba63f8b654375448, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &8432240843312630480
 Rigidbody2D:
   serializedVersion: 4
@@ -161,27 +182,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3577893, y: 1.0975788}
   m_EdgeRadius: 0
---- !u!95 &5760366587331513280
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4365840742835320032}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6413682c622ec034ba63f8b654375448, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3196719118677637000
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
         attributes.AttackRate.Value /= levelMultiplier;
     }
 
-    public virtual void TakeDamage(int amount)
+    public virtual void TakeDamage(float amount)
     {
         attributes.Health.Subtract(amount);
         if (attributes.Health.Value <= 0)
