@@ -25,11 +25,19 @@ public class Character : MonoBehaviour
     
     protected void InitializeAttributes()
     {
+        float levelMultiplier = 1f + level * 0.25f;
+        
         attributes.Health = new AttributeComponent(attributes.Health.InitialValue);
         attributes.AttackSpeed = new AttributeComponent(attributes.AttackSpeed.InitialValue);
         attributes.AttackDamage = new AttributeComponent(attributes.AttackDamage.InitialValue);
         attributes.MoveSpeed = new AttributeComponent(attributes.MoveSpeed.InitialValue);
         attributes.AttackRate = new AttributeComponent(attributes.AttackRate.InitialValue);
+        
+        attributes.Health.Value *= levelMultiplier;
+        attributes.AttackSpeed.Value *= levelMultiplier;
+        attributes.AttackDamage.Value *= levelMultiplier;
+        attributes.MoveSpeed.Value *= levelMultiplier;
+        attributes.AttackRate.Value /= levelMultiplier;
     }
 
     public virtual void TakeDamage(int amount)
@@ -61,14 +69,5 @@ public class Character : MonoBehaviour
     {
         get { return level; }
         set { level = value; }
-    }
-
-    private void LevelUpModifiers()
-    {
-        float modifiedAttackSpeed = attributes.AttackSpeed.Value * (1 + level * 0.05f);
-        float modifiedWalkSpeed = attributes.MoveSpeed.Value * (1 + level * 0.05f);
-    
-        animator.SetFloat("AttackSpeedMultiplier", modifiedAttackSpeed);
-        animator.SetFloat("WalkSpeedMultiplier", modifiedWalkSpeed);
     }
 }
