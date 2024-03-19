@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d768074-f93c-4cf0-bfdd-17fa4899015a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EndlessRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndlessRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttributeComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttributeComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710611760071</updated>
       <workItem from="1710611762128" duration="18304000" />
-      <workItem from="1710852336434" duration="5753000" />
+      <workItem from="1710852336434" duration="7138000" />
     </task>
     <servers />
   </component>
