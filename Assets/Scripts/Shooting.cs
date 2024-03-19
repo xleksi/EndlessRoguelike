@@ -11,12 +11,13 @@ public class Shooting : MonoBehaviour
     public Transform ProjectileTransform;
     public bool canFire;
     private float timer;
-    public float FireRate;
+    private Character character;
     
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        character = FindObjectOfType<Character>();
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class Shooting : MonoBehaviour
         if (!canFire)
         {
             timer += Time.deltaTime;
-            if (timer > FireRate)
+            if (timer > character.GetAttributes().AttackRate.Value)
             {
                 canFire = true;
                 timer = 0;

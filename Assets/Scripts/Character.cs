@@ -9,6 +9,7 @@ public class Character : MonoBehaviour
         public AttributeComponent AttackSpeed;
         public AttributeComponent AttackDamage;
         public AttributeComponent MoveSpeed;
+        public AttributeComponent AttackRate;
     }
 
     [SerializeField] private Attributes attributes;
@@ -28,6 +29,7 @@ public class Character : MonoBehaviour
         attributes.AttackSpeed = new AttributeComponent(attributes.AttackSpeed.InitialValue);
         attributes.AttackDamage = new AttributeComponent(attributes.AttackDamage.InitialValue);
         attributes.MoveSpeed = new AttributeComponent(attributes.MoveSpeed.InitialValue);
+        attributes.AttackRate = new AttributeComponent(attributes.AttackRate.InitialValue);
     }
 
     public virtual void TakeDamage(int amount)
