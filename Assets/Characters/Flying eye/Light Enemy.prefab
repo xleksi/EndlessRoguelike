@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 3196719118677637000}
   - component: {fileID: 3690033373198589664}
   m_Layer: 0
-  m_Name: Flying Eye
-  m_TagString: Untagged
+  m_Name: Light Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,19 +196,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attributes:
     Health:
-      initialValue: 10
+      initialValue: 5
       value: 0
     AttackSpeed:
-      initialValue: 3
+      initialValue: 0
       value: 0
     AttackDamage:
       initialValue: 2
       value: 0
     MoveSpeed:
-      initialValue: 7
+      initialValue: 5
       value: 0
     AttackRate:
-      initialValue: 0
+      initialValue: 2
       value: 0
   level: 0
 --- !u!114 &3690033373198589664

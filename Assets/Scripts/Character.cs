@@ -45,6 +45,7 @@ public class Character : MonoBehaviour
         attributes.Health.Subtract(amount);
         if (attributes.Health.Value <= 0)
         {
+            animator.Play("Death");
             Die();
         }
         else
