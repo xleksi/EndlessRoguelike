@@ -15,6 +15,7 @@ public class AttributeComponent
     public float InitialValue
     {
         get { return initialValue; }
+        set { this.value = value; }
     }
     
     public float Value

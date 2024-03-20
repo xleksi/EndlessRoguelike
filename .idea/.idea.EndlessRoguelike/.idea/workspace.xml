@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5d768074-f93c-4cf0-bfdd-17fa4899015a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EndlessRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EndlessRoguelike/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttributeComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttributeComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +25,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AttributeComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shooting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/EditMode/CharacterTesting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/EditMode/EnemySpawnerTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,7 +59,7 @@
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -108,6 +118,8 @@
       <updated>1710611760071</updated>
       <workItem from="1710611762128" duration="18304000" />
       <workItem from="1710852336434" duration="7138000" />
+      <workItem from="1710860307142" duration="25243000" />
+      <workItem from="1710888056205" duration="8042000" />
     </task>
     <servers />
   </component>

@@ -23,16 +23,16 @@ public class Character : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     
-    protected void InitializeAttributes()
+    public void InitializeAttributes()
     {
         float levelMultiplier = 1f + level * 0.25f;
-        
+    
         attributes.Health = new AttributeComponent(attributes.Health.InitialValue);
         attributes.AttackSpeed = new AttributeComponent(attributes.AttackSpeed.InitialValue);
         attributes.AttackDamage = new AttributeComponent(attributes.AttackDamage.InitialValue);
         attributes.MoveSpeed = new AttributeComponent(attributes.MoveSpeed.InitialValue);
         attributes.AttackRate = new AttributeComponent(attributes.AttackRate.InitialValue);
-        
+    
         attributes.Health.Value *= levelMultiplier;
         attributes.AttackSpeed.Value *= levelMultiplier;
         attributes.AttackDamage.Value *= levelMultiplier;
@@ -40,6 +40,23 @@ public class Character : MonoBehaviour
         attributes.AttackRate.Value /= levelMultiplier;
     }
 
+    public void InitializeAttributesForTesting()
+    {
+        if (attributes.Health == null || attributes.AttackSpeed == null || attributes.AttackDamage == null ||
+            attributes.MoveSpeed == null || attributes.AttackRate == null)
+        {
+            Debug.LogError("One or more attributes is null.");
+            return;
+        }
+
+        InitializeAttributes();
+    }
+    
+    public Attributes GetAttributes()
+    {
+        return attributes;
+    }
+    
     public virtual void TakeDamage(float amount)
     {
         attributes.Health.Subtract(amount);
@@ -60,12 +77,7 @@ public class Character : MonoBehaviour
         animator.SetBool("isAlive",false);
         Destroy(gameObject);
     }
-
-    public Attributes GetAttributes()
-    {
-        return attributes;
-    }
-
+    
     public int Level
     {
         get { return level; }

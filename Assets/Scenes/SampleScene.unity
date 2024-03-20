@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attributes:
     Health:
-      initialValue: 50
+      initialValue: 100
       value: 0
     AttackSpeed:
       initialValue: 7.5

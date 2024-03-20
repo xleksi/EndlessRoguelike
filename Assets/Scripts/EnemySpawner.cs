@@ -11,14 +11,14 @@ public class EnemyType
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyType[] enemyTypes;
-    [SerializeField] private Transform player;
-    [SerializeField] private int initialEnemiesPerWave = 10;
-    [SerializeField] private int enemiesIncreasePerWave = 5;
+    [SerializeField] public Transform player;
+    [SerializeField] public int initialEnemiesPerWave = 10;
+    [SerializeField] public int enemiesIncreasePerWave = 5;
     [SerializeField] private float minSpawnRadius = 5f;
     [SerializeField] private float maxSpawnRadius = 15f;
     [SerializeField] private float minDistanceBetweenEnemies = 2f;
     [SerializeField] private float spawnDelayBetweenEnemies = 1f;
-    [SerializeField] private float timeBetweenWaves = 30f;
+    [SerializeField] public float timeBetweenWaves = 30f;
     [SerializeField] private float waveDelayDecrease = 1f;
     [SerializeField] private float spawnRate = 1f;
 
@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
     private float nextSpawnTime;
     private float nextWaveTime;
 
-    private Transform cachedPlayerTransform;
+    public Transform cachedPlayerTransform;
 
     private void Start()
     {
@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
         cachedPlayerTransform = player;
     }
 
-    private void Update()
+    public void Update()
     {
         if (Time.time >= nextWaveTime)
         {
@@ -66,14 +66,26 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
+        if (enemyTypes == null || cachedPlayerTransform == null)
+        {
+            Debug.LogError("Enemy types array or player transform is null.");
+            return;
+        }
+
         for (int i = 0; i < enemyTypes.Length; i++)
         {
             float randomChance = Random.value;
             if (randomChance <= enemyTypes[i].spawnChance)
             {
                 GameObject enemyPrefab = enemyTypes[i].prefab;
+
+                if (enemyPrefab == null)
+                {
+                    Debug.LogError("Enemy prefab is null.");
+                    continue;
+                }
 
                 Vector2 randomDirection = Random.insideUnitCircle.normalized * Random.Range(minSpawnRadius, maxSpawnRadius);
                 Vector3 spawnPosition = cachedPlayerTransform.position + new Vector3(randomDirection.x, 0, randomDirection.y);
@@ -82,9 +94,26 @@ public class EnemySpawner : MonoBehaviour
                 if (colliders.Length == 0)
                 {
                     Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-                    break; 
+                    break;
                 }
             }
         }
+    }
+    
+    public void InitializeForTesting()
+    {
+        if (player == null)
+        {
+            Debug.LogError("Player transform not assigned in EnemySpawner.");
+            enabled = false;
+            return;
+        }
+
+        enemiesToSpawn = initialEnemiesPerWave;
+        enemiesSpawned = 0;
+        nextSpawnTime = Time.time;
+        nextWaveTime = Time.time + timeBetweenWaves;
+
+        cachedPlayerTransform = player;
     }
 }
